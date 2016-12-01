@@ -28,13 +28,16 @@ namespace AspNet.Identity.NoEF.Data
         public BaseHandler() 
         { 
             DatabaseProviderFactory factory = new DatabaseProviderFactory();
-            
+
 
             //Create Database using 'defaultDatabase' value from 'dataConfiguration' tag in web.config
             //db = factory.CreateDefault();
-            db = new SqlDatabase("Server=.;Database=videoresume;User Id=sa;Password=a;");
+            //db = new SqlDatabase("Server=.;Database=videoresume;User Id=sa;Password=a;");
+            db = new SqlDatabase("Server=198.38.83.33;Database=tyagit3_vms;User Id=tyagit3_vms;Password=vms@%25;");
 
-            
+
+
+
         }
     }
 }
