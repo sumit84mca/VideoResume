@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace AspNet.Identity.NoEF.Test.Models
 {
@@ -65,9 +66,22 @@ namespace AspNet.Identity.NoEF.Test.Models
     public class RegisterViewModel
     {
         [Required]
+        [DataType(DataType.Text)]
+        [Display(Name = "Name")]
+        public string Name { get; set; }
+        //[Required]
+        //[DataType(DataType.Text)]
+        //[Display(Name = "Address Line 1")]
+        //public string AddressLine1 { get; set; }
+                
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
+        [Required]
+        [DataType(DataType.PhoneNumber)]
+        [Display(Name = "Mobile No")]
+        public string MobileNo { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
@@ -77,8 +91,19 @@ namespace AspNet.Identity.NoEF.Test.Models
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        public List<SelectListItem> CountryList { get; set; }
+        public List<SelectListItem> StateList { get; set; }
+        public List<SelectListItem> CityList { get; set; }
+
+        public RegisterViewModel()
+        {
+            CountryList = new List<SelectListItem>();
+            StateList = new List<SelectListItem>();
+            CityList = new List<SelectListItem>();
+        }
     }
 
     public class ResetPasswordViewModel
@@ -96,7 +121,7 @@ namespace AspNet.Identity.NoEF.Test.Models
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
         public string Code { get; set; }

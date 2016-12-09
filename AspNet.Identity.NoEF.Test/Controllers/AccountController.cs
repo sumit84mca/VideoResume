@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using AspNet.Identity.NoEF.Test.Models;
 using System.Web.Mvc.Filters;
+using System.Collections.Generic;
 
 namespace AspNet.Identity.NoEF.Test.Controllers
 {
@@ -142,7 +143,23 @@ namespace AspNet.Identity.NoEF.Test.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            return View();
+            RegisterViewModel rv = new RegisterViewModel();
+            rv.StateList.Add(new SelectListItem
+            {
+                Text = "State 1",
+                Value = "1"
+            });
+            rv.CountryList.Add(new SelectListItem
+            {
+                Text = "Country 1",
+                Value = "1"
+            });
+            rv.CityList.Add(new SelectListItem
+            {
+                Text = "City 1",
+                Value = "1"
+            });
+            return View(rv);
         }
 
         //
@@ -154,7 +171,7 @@ namespace AspNet.Identity.NoEF.Test.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = model.Email, Email = model.Email };
+                var user = new IdentityUser { UserName = model.Email, Email = model.Email, PhoneNumber = model.MobileNo, Name = model.Name };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

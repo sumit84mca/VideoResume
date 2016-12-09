@@ -13,10 +13,24 @@ namespace AspNet.Identity.NoEF.Test.Controllers
     {
         IApplicationSessionStore AppSession;
         IUserSession UserSession;
+        protected override void OnAuthentication(AuthenticationContext filterContext)
+        {
+            base.OnAuthentication(filterContext);
+            if (User.Identity.IsAuthenticated)
+            {
+                string userid = User.Identity.GetUserId();
+                UserSession = CreateLoginSession(userid);
+                AppSession["UserSession"] = UserSession;
+
+
+            }
+
+            //User.Identity.GetUserId();
+        }
         public ActionResult Index()
         {
             return View();
-        }
+        }       
 
         public HomeController()
         {
@@ -33,21 +47,7 @@ namespace AspNet.Identity.NoEF.Test.Controllers
                 return _userManager;
             }
         }
-
-
-        protected override void OnAuthentication(AuthenticationContext filterContext)
-        {
-            base.OnAuthentication(filterContext);
-            if (User.Identity.IsAuthenticated)
-            {
-                string userid = User.Identity.GetUserId();
-                UserSession = CreateLoginSession(userid);
-                AppSession["UserSession"] = UserSession;
-            }
-
-            //User.Identity.GetUserId();
-        }
-
+        
         private string CreateLoginTrackID(string userID)
         {
             UserSessionStore userSessionStore = new UserSessionStore();

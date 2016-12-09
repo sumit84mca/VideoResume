@@ -325,6 +325,7 @@
     <Content Include="website\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="website\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Shared\_LayoutMain.cshtml" />
+    <Content Include="Views\Account\ProfileIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -8,7 +8,7 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/Content/font-awesome.min.css")    
-    @Styles.Render("~/Content/bootstrap.min.css")
+    
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation" style="background-color: #40a7e2;">
@@ -23,11 +23,12 @@
                 <a class="navbar-brand topnav" style="font-size: 24px; font-family: 'Segoe Print'" href="home.html"><span style="color: blueviolet;"></span><span style="color: white;"> </span></a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav">
                     <li>
                         @Html.ActionLink("Home", "Index", "Home")
                     </li>                    
                 </ul>
+                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </nav>
