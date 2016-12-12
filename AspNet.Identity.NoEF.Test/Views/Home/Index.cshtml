@@ -32,8 +32,8 @@
                     <div class="row">
                         <div class="col-lg-1"></div>
                         <div class="col-lg-10 text-left" style="padding: inherit;">
-                            <button class="btn btn-default btn-lg" type="button" onclick="window.location.href='../account/register'">Register To Our Services</button>&nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-default btn-lg" type="button">Learn More</button>
+                            <button class="btn btn-default btn-lg" type="button" onclick="location.href='@Url.Action("Register","Account",new { type = "candidate" })'">Register as a candidate</button>&nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-default btn-lg" type="button" onclick="location.href='@Url.Action("Register","Account",new { type = "department" })'">Register as department user</button>&nbsp;&nbsp;&nbsp;
                         </div>
                         <div class="col-lg-1"></div>
                     </div>
@@ -100,8 +100,8 @@
                     <div class="row">
                         <div class="col-lg-1"></div>
                         <div class="col-lg-10 text-left" style="padding: inherit;">
-                            <button class="btn btn-default btn-lg" type="button" onclick="window.location.href = '../account/register'">Register To Our Services</button>&nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-default btn-lg" type="button">Learn More</button>
+                            <button class="btn btn-default btn-lg" type="button" onclick="location.href='@Url.Action("Register","Account",new { type = "candidate" })'">Register as a candidate</button>&nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-default btn-lg" type="button" onclick="location.href='@Url.Action("Register","Account",new { type = "department" })'">Register as department user</button>&nbsp;&nbsp;&nbsp;
                         </div>
                         <div class="col-lg-1"></div>
                     </div>

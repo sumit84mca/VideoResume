@@ -1,6 +1,6 @@
 ﻿@model AspNet.Identity.NoEF.Test.Models.RegisterViewModel
 @{
-    ViewBag.Title = "ProfileIndex";
+    ViewBag.Title = "Manage Profile";
 }
 
 <div class="container">
@@ -13,7 +13,7 @@
         <dl class="dl-horizontal">
             <dt>Password:</dt>
             <dd>
-                @Html.ActionLink("Change your password", "ChangePassword")
+                @Html.ActionLink("Change your password", "ChangePassword", "Manage")
             </dd>
             <dt>Address:</dt>
             <dd>
@@ -23,19 +23,19 @@
         <div class="form-group">
             @Html.Label("Name", new { @class = "col-md-2 control-label" })
             <div>
-                @Html.Label(Model.Name, new { @class = "col-md-10 control-label" })
+                @Model.Name
             </div>
         </div>
         <div class="form-group">
             @Html.Label("Mobile", new { @class = "col-md-2 control-label" })
             <div>
-                @Html.Label(Model.MobileNo, new { @class = "col-md-10 control-label" })
+                @Model.MobileNo
             </div>
         </div>
         <div class="form-group">
             @Html.Label("Email Id", new { @class = "col-md-2 control-label" })
             <div>
-                @Html.Label(Model.Email, new { @class = "col-md-10 control-label" })
+                @Model.Email
             </div>
         </div>
     </div>
