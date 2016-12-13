@@ -68,11 +68,7 @@ namespace AspNet.Identity.NoEF.Test.Models
         [Required]
         [DataType(DataType.Text)]
         [Display(Name = "Name")]
-        public string Name { get; set; }
-        //[Required]
-        //[DataType(DataType.Text)]
-        //[Display(Name = "Address Line 1")]
-        //public string AddressLine1 { get; set; }
+        public string Name { get; set; }        
                 
         [Required]
         [EmailAddress]
@@ -93,17 +89,8 @@ namespace AspNet.Identity.NoEF.Test.Models
         [Display(Name = "Confirm password")]
         [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
-
-        public List<SelectListItem> CountryList { get; set; }
-        public List<SelectListItem> StateList { get; set; }
-        public List<SelectListItem> CityList { get; set; }
-
-        public RegisterViewModel()
-        {
-            CountryList = new List<SelectListItem>();
-            StateList = new List<SelectListItem>();
-            CityList = new List<SelectListItem>();
-        }
+        public ChangeAddressViewModel AddressView { get; set; }
+               
     }
 
     public class ResetPasswordViewModel

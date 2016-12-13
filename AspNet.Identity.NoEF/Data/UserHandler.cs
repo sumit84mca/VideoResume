@@ -46,6 +46,7 @@ namespace AspNet.Identity.NoEF.Data
 
             return newUser;
         }
+        
 
         /// <summary>
         /// Returns the User object by user ID.
@@ -67,6 +68,7 @@ namespace AspNet.Identity.NoEF.Data
                 return GetUser(db.ExecuteReader(cmd));
             }
         }
+        
 
         /// <summary>
         /// Returns the User object by user name.
@@ -90,7 +92,7 @@ namespace AspNet.Identity.NoEF.Data
                 return GetUser(db.ExecuteReader(cmd));
             }
         }
-
+        
         /// <summary>
         /// Adds new record to IdentityUser table.
         /// </summary>

@@ -83,6 +83,7 @@
     <Compile Include="IdentityRole.cs" />
     <Compile Include="IdentityUser.cs" />
     <Compile Include="IApplicationSessionStore.cs" />
+    <Compile Include="UserAddress.cs" />
     <Compile Include="IUserSession.cs" />
     <Compile Include="LoginTrack.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

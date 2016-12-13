@@ -83,7 +83,7 @@ namespace AspNet.Identity.NoEF.Test.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToAction("Welcome", "Home");//RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -142,24 +142,8 @@ namespace AspNet.Identity.NoEF.Test.Controllers
         // GET: /Account/Register
         [AllowAnonymous]
         public ActionResult Register()
-        {
-            RegisterViewModel rv = new RegisterViewModel();
-            rv.StateList.Add(new SelectListItem
-            {
-                Text = "State 1",
-                Value = "1"
-            });
-            rv.CountryList.Add(new SelectListItem
-            {
-                Text = "Country 1",
-                Value = "1"
-            });
-            rv.CityList.Add(new SelectListItem
-            {
-                Text = "City 1",
-                Value = "1"
-            });
-            return View(rv);
+        {            
+            return View();
         }
 
         //
@@ -183,7 +167,7 @@ namespace AspNet.Identity.NoEF.Test.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Welcome", "Home");
                 }
                 AddErrors(result);
             }

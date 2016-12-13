@@ -327,6 +327,9 @@
     <Content Include="website\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Shared\_LayoutMain.cshtml" />
     <Content Include="Views\Profile\ProfileIndex.cshtml" />
+    <Content Include="Views\Profile\ChangeAddress.cshtml" />
+    <Content Include="Views\Profile\AddressPartial.cshtml" />
+    <Content Include="Views\Home\Welcome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -343,6 +346,14 @@
     <ProjectReference Include="..\AspNet.Identity.NoEF\AspNet.Identity.NoEF.csproj">
       <Project>{68a82628-6094-4875-80cb-3d26b8acf740}</Project>
       <Name>AspNet.Identity.NoEF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{17fca15e-d9ef-47fe-9e3f-263512cce3ea}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{cd5b49a3-2161-45a6-85a3-c59289917192}</Project>
+      <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

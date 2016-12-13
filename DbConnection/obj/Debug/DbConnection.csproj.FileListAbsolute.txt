@@ -1,0 +1,5 @@
+D:\Projects\GIT\VideoResume\DbConnection\bin\Debug\DbConnection.dll
+D:\Projects\GIT\VideoResume\DbConnection\bin\Debug\DbConnection.pdb
+D:\Projects\GIT\VideoResume\DbConnection\obj\Debug\DbConnection.csprojResolveAssemblyReference.cache
+D:\Projects\GIT\VideoResume\DbConnection\obj\Debug\DbConnection.dll
+D:\Projects\GIT\VideoResume\DbConnection\obj\Debug\DbConnection.pdb

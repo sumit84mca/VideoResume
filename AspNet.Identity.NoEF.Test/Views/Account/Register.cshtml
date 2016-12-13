@@ -15,7 +15,7 @@
         <hr />
         @Html.ValidationSummary("", new { @class = "text-danger" })
         <div class="form-group">
-            Register as + Convert.ToString(Request.QueryString["type"])
+            Register as @Convert.ToString(Request.QueryString["type"])
         </div>
         <div class="form-group">
             @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })

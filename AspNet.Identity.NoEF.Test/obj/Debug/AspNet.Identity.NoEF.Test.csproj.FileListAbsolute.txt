@@ -238,3 +238,9 @@ D:\Projects\GIT\VideoResume\AspNet.Identity.NoEF.Test\bin\Microsoft.Practices.Un
 D:\Projects\GIT\VideoResume\AspNet.Identity.NoEF.Test\obj\Debug\AspNet.Identity.NoEF.Test.csprojResolveAssemblyReference.cache
 D:\Projects\GIT\VideoResume\AspNet.Identity.NoEF.Test\obj\Debug\AspNet.Identity.NoEF.Test.dll
 D:\Projects\GIT\VideoResume\AspNet.Identity.NoEF.Test\obj\Debug\AspNet.Identity.NoEF.Test.pdb
+D:\Projects\GIT\VideoResume\AspNet.Identity.NoEF.Test\bin\DAL.dll
+D:\Projects\GIT\VideoResume\AspNet.Identity.NoEF.Test\bin\Models.dll
+D:\Projects\GIT\VideoResume\AspNet.Identity.NoEF.Test\bin\DbConnection.dll
+D:\Projects\GIT\VideoResume\AspNet.Identity.NoEF.Test\bin\DAL.pdb
+D:\Projects\GIT\VideoResume\AspNet.Identity.NoEF.Test\bin\Models.pdb
+D:\Projects\GIT\VideoResume\AspNet.Identity.NoEF.Test\bin\DbConnection.pdb

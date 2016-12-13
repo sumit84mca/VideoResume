@@ -30,7 +30,11 @@ namespace AspNet.Identity.NoEF.Test.Controllers
         public ActionResult Index()
         {
             return View();
-        }       
+        }
+        public ActionResult Welcome()
+        {
+            return View();
+        }
 
         public HomeController()
         {
