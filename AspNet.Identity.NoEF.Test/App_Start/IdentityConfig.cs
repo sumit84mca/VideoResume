@@ -18,6 +18,7 @@ namespace AspNet.Identity.NoEF.Test
     {
         public Task SendAsync(IdentityMessage message)
         {
+            // TODO : code to insert into email table.
             // Plug in your email service here to send an email.
             return Task.FromResult(0);
         }
