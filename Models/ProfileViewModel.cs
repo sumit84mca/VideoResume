@@ -35,9 +35,9 @@ namespace AspNet.Identity.NoEF.Test.Models
         [DataType(DataType.PostalCode)]
         [Display(Name = "PIN")]
         public string PIN { get; set; }
-        public List<SelectListItem> CountryList { get; set; }
-        public List<SelectListItem> StateList { get; set; }
-        public List<SelectListItem> CityList { get; set; }        
+        public IEnumerable<SelectListItem> CountryList { get; set; }
+        public IEnumerable<SelectListItem> StateList { get; set; }
+        public IEnumerable<SelectListItem> CityList { get; set; }        
 
         public string UserId { get; set; }        
 

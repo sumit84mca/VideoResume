@@ -23,29 +23,25 @@ namespace AspNet.Identity.NoEF.Test.Controllers
                 Name = UserSession.Name,
                 MobileNo = UserSession.Mobile,
                 Email = UserSession.Email,
-                AddressView = UserProfile.GetUserAddress(UserSession.UserID)                
+                AddressView = UserProfile.GetUserAddress(UserSession.UserID)
             };
             return View(model);
         }
         public ActionResult ChangeAddress()
         {
             var model = new ChangeAddressViewModel();
-            model.StateList.Add(new SelectListItem()
-            {
-                Text = "State 1",
-                Value = "1"
-            });
-            model.CountryList.Add(new SelectListItem()
-            {
-                Text = "Country 1",
-                Value = "1"
-            });
-            model.CityList.Add(new SelectListItem()
-            {
-                Text = "City 1",
-                Value = "1"
-            });
+
+            model.CountryList = new SelectList(Masters.GetCountryList(), "CountryId", "CountryName");
+
             return View(model);
+        }
+        public JsonResult GetStates(int countryid)
+        {
+            return Json(new SelectList(Masters.GetStateList(countryid), "StateId", "StateName"));
+        }
+        public JsonResult GetCities(int stateid)
+        {
+            return Json(new SelectList(Masters.GetCityList(stateid), "CityId", "CityName"));
         }
 
         //
@@ -60,13 +56,13 @@ namespace AspNet.Identity.NoEF.Test.Controllers
             }
             model.UserId = UserSession.UserID;
             int result = UserProfile.UpdateAddress(model);
-            if(result == 1)
+            if (result == 1)
             {
                 //TODO: Success message
                 return RedirectToAction("ProfileIndex", "Profile");
             }
-            
+
             return View(model);
-        }        
+        }
     }
 }

@@ -30,9 +30,9 @@ namespace DAL
                 am.AddressLine1 = dt.Rows[0]["AddressLine1"].ToString();
                 am.AddressLine2 = dt.Rows[0]["AddressLine2"].ToString();
                 am.AddressLine3 = dt.Rows[0]["AddressLine3"].ToString();
-                am.Country = dt.Rows[0]["CountryId"].ToString();
-                am.State = dt.Rows[0]["StateId"].ToString();
-                am.City = dt.Rows[0]["CityId"].ToString();
+                am.Country = dt.Rows[0]["CountryName"].ToString();
+                am.State = dt.Rows[0]["StateName"].ToString();
+                am.City = dt.Rows[0]["CityName"].ToString();
                 am.PIN = dt.Rows[0]["PIN"].ToString();
             }
             return am;

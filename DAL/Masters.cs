@@ -1,5 +1,9 @@
-﻿using System;
+﻿using AspNet.Identity.NoEF.Test.Models;
+using DbConnection;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,24 +11,70 @@ using System.Threading.Tasks;
 namespace DAL
 {
     public class Masters
-    {        
-        //public static DataTable GetUserAddress(String userId)
-        //{
-        //    ChangeAddressViewModel am = new ChangeAddressViewModel();
-        //    DataTable dt = SqlHelper.ExecuteDataset(ConnectionHandler.ConString, CommandType.StoredProcedure, "uspGetUserAddress",
-        //        new SqlParameter("@UserId", userId)).Tables[0];
-        //    if (dt.Rows.Count > 0)
-        //    {
-        //        am.UserId = userId;
-        //        am.AddressLine1 = dt.Rows[0]["AddressLine1"].ToString();
-        //        am.AddressLine2 = dt.Rows[0]["AddressLine2"].ToString();
-        //        am.AddressLine3 = dt.Rows[0]["AddressLine3"].ToString();
-        //        am.Country = dt.Rows[0]["CountryId"].ToString();
-        //        am.State = dt.Rows[0]["StateId"].ToString();
-        //        am.City = dt.Rows[0]["CityId"].ToString();
-        //        am.PIN = dt.Rows[0]["PIN"].ToString();
-        //    }
-        //    return am;
-        //}
+    {
+        public static List<Country> GetCountryList()
+        {
+            List<Country> countries = new List<Country>();
+            SqlDataReader iread = SqlHelper.ExecuteReader(ConnectionHandler.ConString, CommandType.StoredProcedure, "uspGetCountryList");
+
+            while (iread.Read())
+            {
+                countries.Add(GetCountry(iread));
+            }
+
+            return countries;
+        }
+        private static Country GetCountry(SqlDataReader iread)
+        {
+            Country country = new Country();
+            country.CountryId = Convert.ToInt32(iread["CountryId"]);
+            country.CountryName = Convert.ToString(iread["CountryName"]);
+
+            return country;
+        }
+        public static List<State> GetStateList(int countryid)
+        {
+            List<State> states = new List<State>();
+            SqlDataReader iread = SqlHelper.ExecuteReader(ConnectionHandler.ConString, CommandType.StoredProcedure, "uspGetStateList",
+                new SqlParameter("@CountryId", countryid));
+
+            while (iread.Read())
+            {
+                states.Add(GetState(iread));
+            }
+
+            return states;
+        }
+        private static State GetState(SqlDataReader iread)
+        {
+            State state = new State();
+            state.StateId = Convert.ToInt32(iread["StateId"]);
+            state.StateName = Convert.ToString(iread["StateName"]);
+            state.CountryId = Convert.ToInt32(iread["CountryFkId"]);
+
+            return state;
+        }
+        public static List<City> GetCityList(int stateid)
+        {
+            List<City> cities = new List<City>();
+            SqlDataReader iread = SqlHelper.ExecuteReader(ConnectionHandler.ConString, CommandType.StoredProcedure, "uspGetCityList",
+                new SqlParameter("@StateId", stateid));
+
+            while (iread.Read())
+            {
+                cities.Add(GetCity(iread));
+            }
+
+            return cities;
+        }
+        private static City GetCity(SqlDataReader iread)
+        {
+            City city = new City();
+            city.CityId = Convert.ToInt32(iread["CityId"]);
+            city.CityName = Convert.ToString(iread["CityName"]);
+            city.StateId = Convert.ToInt32(iread["StateFkId"]);
+
+            return city;
+        }
     }
 }
