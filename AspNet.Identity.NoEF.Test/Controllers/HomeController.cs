@@ -35,6 +35,26 @@ namespace AspNet.Identity.NoEF.Test.Controllers
         {
             return View();
         }
+        public ActionResult AboutUs()
+        {
+            return View();
+        }
+        public ActionResult Approach()
+        {
+            return View();
+        }
+        public ActionResult Vision()
+        {
+            return View();
+        }
+        public ActionResult Services()
+        {
+            return View();
+        }
+        public ActionResult ContactUs()
+        {
+            return View();
+        }
 
         public HomeController()
         {

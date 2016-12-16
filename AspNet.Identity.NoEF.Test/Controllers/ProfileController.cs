@@ -35,13 +35,13 @@ namespace AspNet.Identity.NoEF.Test.Controllers
 
             return View(model);
         }
-        public JsonResult GetStates(int countryid)
+        public JsonResult GetStates(int id)
         {
-            return Json(new SelectList(Masters.GetStateList(countryid), "StateId", "StateName"));
+            return Json(new SelectList(Masters.GetStateList(id), "StateId", "StateName"));
         }
-        public JsonResult GetCities(int stateid)
+        public JsonResult GetCities(int id)
         {
-            return Json(new SelectList(Masters.GetCityList(stateid), "CityId", "CityName"));
+            return Json(new SelectList(Masters.GetCityList(id), "CityId", "CityName"));
         }
 
         //

@@ -23,11 +23,7 @@
                 <a class="navbar-brand topnav" style="font-size: 24px; font-family: 'Segoe Print'" href="home.html"><span style="color: blueviolet;"></span><span style="color: white;"> </span></a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                @*<ul class="nav navbar-nav">
-                    <li>
-                        @Html.ActionLink("Home", "Index", "Home")
-                    </li>                    
-                </ul>*@
+                
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
@@ -50,34 +46,31 @@
                             <br />
                             <ul class="list-inline">
                                 <li>
-                                    <ul class="list-unstyled">
+                                    <ul class="list-unstyled">                                        
                                         <li>
-                                            <a href="home.html" style="color: #f5e1e1">Home</a>
+                                            @Html.ActionLink("About Us", "AboutUs", "Home")                                            
                                         </li>
                                         <li>
-                                            <a href="about.html" style="color: #f5e1e1">About Us</a>
+                                            @Html.ActionLink("Our Approach", "Approach", "Home")                                            
                                         </li>
                                         <li>
-                                            <a href="approach.html" style="color: #f5e1e1">Our Approach</a>
+                                            @Html.ActionLink("Vision", "Vision", "Home")
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <ul class="list-unstyled">
+                                    <ul class="list-unstyled">                                        
                                         <li>
-                                            <a href="vision.html" style="color: #f5e1e1">Vision</a>
+                                            @Html.ActionLink("Services", "Services", "Home")                                            
                                         </li>
                                         <li>
-                                            <a href="#" style="color: #f5e1e1">Services</a>
-                                        </li>
-                                        <li>
-                                            <a href="Contact.html" style="color: #f5e1e1">Contact Us</a>
+                                            @Html.ActionLink("Contact Us", "ContactUs", "Home")
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
-                        <div class="footer-col col-md-4">
+                        @*<div class="footer-col col-md-4">
                             <h3 style="color: white;">Connect With Us</h3>
                             <ul class="list-inline">
                                 <li>
@@ -93,7 +86,7 @@
                                     <a class="btn btn-social-icon btn-google-plus" style="border: 1px solid;"><i class="fa fa-google-plus"></i></a>
                                 </li>
                             </ul>
-                        </div>
+                        </div>*@
                     </div>
                 </div>
             </div>

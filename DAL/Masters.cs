@@ -32,11 +32,11 @@ namespace DAL
 
             return country;
         }
-        public static List<State> GetStateList(int countryid)
+        public static List<State> GetStateList(int id)
         {
             List<State> states = new List<State>();
             SqlDataReader iread = SqlHelper.ExecuteReader(ConnectionHandler.ConString, CommandType.StoredProcedure, "uspGetStateList",
-                new SqlParameter("@CountryId", countryid));
+                new SqlParameter("@CountryId", id));
 
             while (iread.Read())
             {
@@ -54,11 +54,11 @@ namespace DAL
 
             return state;
         }
-        public static List<City> GetCityList(int stateid)
+        public static List<City> GetCityList(int id)
         {
             List<City> cities = new List<City>();
             SqlDataReader iread = SqlHelper.ExecuteReader(ConnectionHandler.ConString, CommandType.StoredProcedure, "uspGetCityList",
-                new SqlParameter("@StateId", stateid));
+                new SqlParameter("@StateId", id));
 
             while (iread.Read())
             {
