@@ -182,7 +182,15 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\cropper\bootstrap.min.css" />
+    <Content Include="Content\cropper\cropper.css" />
+    <Content Include="Content\cropper\font-awesome.min.css" />
+    <Content Include="Content\cropper\main.css" />
+    <Content Include="Content\cropper\qunit.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\modern-business.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -202,7 +210,26 @@
     <Content Include="img\vision.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\vr.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\cropperjs\bootstrap.min.js" />
+    <Content Include="Scripts\cropperjs\cropper.js" />
+    <Content Include="Scripts\cropperjs\jquery.min.js" />
+    <Content Include="Scripts\cropperjs\main.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -290,7 +317,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Test\Index.cshtml" />
     <Content Include="Views\Test\testDisplay.cshtml" />
-    <Content Include="website\bin\contact_me.php" />
     <Content Include="website\Documents\COMAPNY PROFILE.doc" />
     <Content Include="website\font-awesome\fonts\fontawesome-webfont.eot" />
     <Content Include="website\font-awesome\fonts\fontawesome-webfont.ttf" />
@@ -336,9 +362,11 @@
     <Content Include="Views\Home\Vision.cshtml" />
     <Content Include="Views\Home\Services.cshtml" />
     <Content Include="Views\Home\ContactUs.cshtml" />
+    <Content Include="Views\Manage\ChangeProfilePic.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="website\bin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

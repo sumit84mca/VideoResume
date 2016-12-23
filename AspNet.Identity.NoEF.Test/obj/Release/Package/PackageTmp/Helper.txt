@@ -1,0 +1,10 @@
+﻿
+Ques : How to set Audit Information in Change Password or any other predefined method.
+	Possible soln is override predefined method with our own. 
+	For this we need to see how password are being generated for the first time and used.
+	If we are going to implement our own methods then following method need to be changed
+		1. Check Password
+		2. Change Password
+		3. Generate Password Hash
+		etc.
+	 

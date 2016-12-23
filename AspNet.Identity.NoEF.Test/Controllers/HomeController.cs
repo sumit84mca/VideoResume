@@ -29,6 +29,10 @@ namespace AspNet.Identity.NoEF.Test.Controllers
         }
         public ActionResult Index()
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                ViewData["UserName"] = UserSession.Name;
+            }
             return View();
         }
         public ActionResult Welcome()

@@ -220,6 +220,12 @@ namespace AspNet.Identity.NoEF.Test.Controllers
         {
             return View();
         }
+        //
+        // GET: /Manage/ChangeProfilePic
+        public ActionResult ChangeProfilePic()
+        {
+            return View();
+        }
 
         //
         // POST: /Manage/ChangePassword
