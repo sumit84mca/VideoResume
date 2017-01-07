@@ -3,7 +3,7 @@
 }
 @Styles.Render("~/Content/modern-business.css")
 <script type="text/javascript">
-    var siteroot=@Url.Content("~/");    
+       
 </script>
 <div>
     <header id="myCarousel" class="carousel slide">
@@ -36,7 +36,8 @@
                         <div class="col-lg-1"></div>
                         <div class="col-lg-10 text-left" style="padding: inherit;">
                             <button class="btn btn-default btn-lg" type="button" onclick="location.href='@Url.Action("Register","Account",new { type = "candidate" })'">Register as a candidate</button>&nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-default btn-lg" type="button" onclick="location.href='@Url.Action("Register","Account",new { type = "department" })'">Register as department user</button>&nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-default btn-lg" type="button" onclick="location.href='@Url.Action("Register","Account",new { type = "corporate" })'">Register as corporate</button>&nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-default btn-lg" type="button" onclick="location.href='@Url.Action("Register","Account",new { type = "consultant" })'">Register as consultant</button>
                         </div>
                         <div class="col-lg-1"></div>
                     </div>
@@ -70,7 +71,8 @@
                         <div class="col-lg-1"></div>
                         <div class="col-lg-10 text-left" style="padding: inherit;">
                             <button class="btn btn-default btn-lg" type="button" onclick="location.href='@Url.Action("Register","Account",new { type = "candidate" })'">Register as a candidate</button>&nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-default btn-lg" type="button" onclick="location.href='@Url.Action("Register","Account",new { type = "department" })'">Register as department user</button>&nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-default btn-lg" type="button" onclick="location.href='@Url.Action("Register","Account",new { type = "corporate" })'">Register as corporate</button>&nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-default btn-lg" type="button" onclick="location.href='@Url.Action("Register","Account",new { type = "consultant" })'">Register as consultant</button>
                         </div>
                         <div class="col-lg-1"></div>
                     </div>
@@ -104,7 +106,8 @@
                         <div class="col-lg-1"></div>
                         <div class="col-lg-10 text-left" style="padding: inherit;">
                             <button class="btn btn-default btn-lg" type="button" onclick="location.href='@Url.Action("Register","Account",new { type = "candidate" })'">Register as a candidate</button>&nbsp;&nbsp;&nbsp;
-                            <button class="btn btn-default btn-lg" type="button" onclick="location.href='@Url.Action("Register","Account",new { type = "department" })'">Register as department user</button>&nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-default btn-lg" type="button" onclick="location.href='@Url.Action("Register","Account",new { type = "corporate" })'">Register as corporate</button>&nbsp;&nbsp;&nbsp;
+                            <button class="btn btn-default btn-lg" type="button" onclick="location.href='@Url.Action("Register","Account",new { type = "consultant" })'">Register as consultant</button>
                         </div>
                         <div class="col-lg-1"></div>
                     </div>
@@ -127,6 +130,61 @@
         </a>
     </header>
     <div class="container-body">
+        <div class="row" style="background-color: #40a7e2">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <hr />
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+        <div class="row" style="background-color: #40a7e2">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-2">
+                <div class="col-sm-6 col-md-11 thumbnail">
+                    <a href="#" class="">
+                        <img src=@Url.Content("~/img/schedule.jpg") alt="schedule interview">
+                    </a>
+                    <div class="caption">
+                        <h4 class="">Schedule your interview</h4>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="col-sm-6 col-md-11 thumbnail">
+                    <a href="#" class="thumbnail">
+                        <img src=@Url.Content("~/img/search.jpg") alt="schedule interview">
+                    </a>
+                    <div class="caption">
+                        <h4 class="">Search candidate video</h4>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="col-sm-6 col-md-11 thumbnail">
+                    <a href="#" class="thumbnail">
+                        <img src=@Url.Content("~/img/database.jpg") alt="schedule interview">
+                    </a>
+                    <div class="caption">
+                        <h4 class="">Get customized database</h4>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="col-sm-6 col-md-11 thumbnail">
+                    <a href="#" class="thumbnail">
+                        <img src=@Url.Content("~/img/video.jpeg") alt="schedule interview">
+                    </a>
+                    <div class="caption">
+                        <h4 class="">Sample interview video</h4>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
         <div class="row" style="background-color: #40a7e2">
             <div class="col-lg-12 text-center">
                 <h3 style="color: whitesmoke;">WHY CHOOSE OUR SERVICES?</h3>
@@ -223,7 +281,8 @@
         </div>
     </div>
     <script src="../../Scripts/js/jquery.js"></script>
-    
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
     <script>
         $('.carousel').carousel({
             interval: 3000 //changes the speed

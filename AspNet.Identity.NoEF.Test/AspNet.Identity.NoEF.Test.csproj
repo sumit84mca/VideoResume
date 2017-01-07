@@ -200,13 +200,17 @@
     <Content Include="img\about.jpg" />
     <Content Include="img\approach.jpg" />
     <Content Include="img\banner-bg.jpg" />
+    <Content Include="img\database.jpg" />
     <Content Include="img\dog.png" />
     <Content Include="img\intro-bg.jpg" />
     <Content Include="img\ipad.png" />
     <Content Include="img\phones.png" />
+    <Content Include="img\schedule.jpg" />
+    <Content Include="img\search.jpg" />
     <Content Include="img\slide-1.jpg" />
     <Content Include="img\slide-2.jpg" />
     <Content Include="img\slide-3.jpg" />
+    <Content Include="img\video.jpeg" />
     <Content Include="img\vision.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
