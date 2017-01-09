@@ -37,6 +37,8 @@ namespace AspNet.Identity.NoEF.Test.Controllers
         }
         public ActionResult Welcome()
         {
+            string url = Request.QueryString["url"];
+            if (!string.IsNullOrEmpty(url)) return Redirect(url); 
             return View();
         }
         public ActionResult AboutUs()

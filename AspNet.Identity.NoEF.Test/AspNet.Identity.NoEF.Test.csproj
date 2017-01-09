@@ -166,6 +166,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CandidateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
@@ -367,6 +368,7 @@
     <Content Include="Views\Home\Services.cshtml" />
     <Content Include="Views\Home\ContactUs.cshtml" />
     <Content Include="Views\Manage\ChangeProfilePic.cshtml" />
+    <Content Include="Views\Candidate\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
