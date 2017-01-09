@@ -73,7 +73,7 @@ namespace AspNet.Identity.NoEF
         public long AddressId { get; set; }
         public object IsActive { get; internal set; }
         public object SecurityStamp { get; internal set; }
-
+        public string UserType { get; set; }
         public Audit Audit { get; set; }
 
 

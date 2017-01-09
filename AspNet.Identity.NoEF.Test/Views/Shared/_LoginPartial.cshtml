@@ -19,9 +19,9 @@ else
     <ul class="nav navbar-nav navbar-right">
         <li>@Html.ActionLink("Home", "Index", "Home", routeValues: null, htmlAttributes: new { id = "homeLink" })</li>
         <li>@Html.ActionLink("About Us", "Index", "Home", routeValues: null, htmlAttributes: new { id = "aboutLink" })</li>
-        <li>@Html.ActionLink("Candidate", "Index", "Home", routeValues: null, htmlAttributes: new { id = "candLink" })</li>
-        <li>@Html.ActionLink("Corporate", "Index", "Home", routeValues: null, htmlAttributes: new { id = "corpLink" })</li>
-        <li>@Html.ActionLink("Consultant", "Index", "Home", routeValues: null, htmlAttributes: new { id = "consLink" })</li>
+        <li>@Html.ActionLink("Candidate", "Register", "Account", routeValues: new { type = "candidate" }, htmlAttributes: new { id = "candLink" })</li>
+        <li>@Html.ActionLink("Corporate", "Register", "Account", routeValues: new { type = "corporate" }, htmlAttributes: new { id = "corpLink" })</li>
+        <li>@Html.ActionLink("Consultant", "Register", "Account", routeValues: new { type = "consultant" }, htmlAttributes: new { id = "consLink" })</li>
         <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
     </ul>
 }

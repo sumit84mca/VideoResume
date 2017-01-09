@@ -14,6 +14,7 @@ namespace AspNet.Identity.NoEF
         string UserName { get; set; }
         string Email { get; set; }
         string Mobile { get; set; }
+        string UserType { get; set; }
         Audit Audit { get; set; }
     }
 }

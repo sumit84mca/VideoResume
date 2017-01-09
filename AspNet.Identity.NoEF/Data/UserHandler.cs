@@ -41,7 +41,7 @@ namespace AspNet.Identity.NoEF.Data
                 newUser.PhoneNumberConfirmed = Convert.ToBoolean(reader["MobileConfirmed"]);
                 newUser.Email = Convert.ToString(reader["Email"]);
                 newUser.EmailConfirmed = Convert.ToBoolean(reader["EmailConfirmed"]);
-
+                newUser.UserType = Convert.ToString(reader["UserType"]);
             }
 
             return newUser;
@@ -127,6 +127,7 @@ namespace AspNet.Identity.NoEF.Data
                 db.AddInParameter(cmd, "MobileConfirmed", DbType.String, newUser.PhoneNumberConfirmed);
                 db.AddInParameter(cmd, "Email", DbType.String, newUser.Email);
                 db.AddInParameter(cmd, "EmailConfirmed", DbType.String, newUser.EmailConfirmed);
+                db.AddInParameter(cmd, "UserType", DbType.String, newUser.UserType);
                 //--Audit Parameters --//
                 Audit.AddAuditParameters(newUser, db, cmd);
 
